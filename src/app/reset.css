@@ -143,6 +143,14 @@ select {
   font-size: max(1em, 16px);
 }
 
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary::marker {
+  content: "";
+}
+
 button * {
   pointer-events: none;
 }

@@ -43,7 +43,8 @@ h3 {
   font-size: var(--h3-size);
 }
 
-p {
+p,
+option {
   font-size: var(--paragraph-size);
 }
 
