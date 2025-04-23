@@ -8,7 +8,7 @@ const ItemQuantity = () => {
 
   return (
     <div>
-      <div className="flex items-center space-x-2">
+      <div className="flex items-center space-x-2 w-25">
         <button onClick={() => setCount(Math.max(1, count - 1))}>
           <HiMinus />
         </button>
@@ -22,7 +22,7 @@ const ItemQuantity = () => {
           <BsPlusLg />
         </button>
       </div>
-      <hr className="w-24 mt-1.5" />
+      <hr />
     </div>
   );
 };

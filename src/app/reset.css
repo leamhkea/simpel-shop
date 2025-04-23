@@ -92,6 +92,7 @@ hr {
   color: inherit;
   height: 0;
   overflow: visible;
+  margin-top: 0.6rem;
 }
 
 svg,

@@ -4,6 +4,8 @@ const Basket = () => {
   return (
     <section>
       <ItemCard />
+      <ItemCard />
+      <ItemCard />
     </section>
   );
 };

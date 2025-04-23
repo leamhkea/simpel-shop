@@ -1,15 +1,15 @@
 import ItemQuantity from "./ItemQuantity";
-import SizeDropdown from "@/components/(singleview)/(details)/SizeDropdown";
+import ItemSizeDropdown from "./ItemSizeDropdown";
 
 const ItemCard = () => {
   return (
-    <div className="flex flex-wrap gap-4">
+    <div className="flex flex-wrap gap-4 my-20">
       <img src="placeholder.png" alt="placeholder" />
 
       {/* Top section */}
-      <div className="flex flex-col justify-between">
+      <div className="flex flex-col justify-between w-100">
         <div>
-          <div className="flex justify-between flex-wrap">
+          <div className="flex justify-between flex-wrap mb-2">
             <h2>Name on the product</h2>
             <h3 className="font-bold">DDK 159</h3>
           </div>
@@ -19,7 +19,7 @@ const ItemCard = () => {
         {/* Bottom section */}
         <div className="flex justify-between flex-wrap">
           <ItemQuantity />
-          <SizeDropdown />
+          <ItemSizeDropdown />
         </div>
       </div>
     </div>
