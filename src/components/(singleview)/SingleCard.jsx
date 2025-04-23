@@ -1,17 +1,15 @@
 import ImageDisplay from "./(singleimg)/ImageDisplay";
 import Description from "./(details)/Description";
 import SingleButton from "./(details)/SingleButton";
-import SizeDropdown from "./(details)/SizeDropdown";
 
 const SingleCard = () => {
   return (
-    <section>
+    <section className="flex">
       <ImageDisplay></ImageDisplay>
-      <article>
+      <div>
         <Description></Description>
-        <SizeDropdown></SizeDropdown>
         <SingleButton></SingleButton>
-      </article>
+      </div>
     </section>
   );
 };
