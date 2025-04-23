@@ -1,5 +1,5 @@
 const SingleButton = () => {
-  return <div></div>;
+  return <button>hej</button>;
 };
 
 export default SingleButton;

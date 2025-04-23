@@ -1,6 +1,6 @@
 const SizeDropdown = () => {
   return (
-    <div className="w-100">
+    <div>
       <select id="cars" name="cars" className="w-100">
         <option value="volvo">Choose a size</option>
         <option value="saab">Small</option>
