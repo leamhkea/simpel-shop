@@ -4,15 +4,15 @@ import SingleButton from "./(details)/SingleButton";
 
 const SingleCard = () => {
   return (
-    <section className="flex h-full">
+    <div className="flex flex-wrap gap-5 bg-(--white) px-10 py-10">
       <ImageDisplay />
-      <div className="flex flex-col justify-between h-full">
+      <div className="flex flex-col justify-between">
         <Description />
-        <div className="mt-auto">
+        <div className="flex justify-between flex-wrap">
           <SingleButton />
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
