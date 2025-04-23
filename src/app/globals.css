@@ -55,10 +55,3 @@ a {
     text-decoration: none;
   }
 }
-
-button {
-  background-color: var(--black);
-  color: var(--white);
-  border-radius: 25px;
-  text-align: center;
-}
