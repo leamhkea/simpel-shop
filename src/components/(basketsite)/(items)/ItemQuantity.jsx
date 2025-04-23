@@ -7,19 +7,22 @@ const ItemQuantity = () => {
   const [count, setCount] = useState(1);
 
   return (
-    <div className="flex items-center space-x-2">
-      <button onClick={() => setCount(Math.max(1, count - 1))}>
-        <HiMinus />
-      </button>
-      <input
-        type="number"
-        value={count}
-        onChange={(e) => setCount(Math.max(1, +e.target.value))}
-        className="text-center w-12"
-      />
-      <button onClick={() => setCount(count + 1)}>
-        <BsPlusLg />
-      </button>
+    <div>
+      <div className="flex items-center space-x-2">
+        <button onClick={() => setCount(Math.max(1, count - 1))}>
+          <HiMinus />
+        </button>
+        <input
+          type="number"
+          value={count}
+          onChange={(e) => setCount(Math.max(1, +e.target.value))}
+          className="text-center w-12"
+        />
+        <button onClick={() => setCount(count + 1)}>
+          <BsPlusLg />
+        </button>
+      </div>
+      <hr className="w-24 mt-1.5" />
     </div>
   );
 };

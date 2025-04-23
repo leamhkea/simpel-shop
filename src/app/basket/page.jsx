@@ -1,9 +1,9 @@
-import ItemQuantity from "@/components/(basketsite)/(items)/ItemQuantity";
+import ItemCard from "@/components/(basketsite)/(items)/ItemCard";
 
 const Basket = () => {
   return (
     <section>
-      <ItemQuantity />
+      <ItemCard />
     </section>
   );
 };
