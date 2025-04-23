@@ -48,9 +48,9 @@ p {
 }
 
 a {
-  text-decoration: italic;
-  color: var(--black);
+  font-style: italic;
+  text-decoration: underline;
   &:hover {
-    text-decoration: underline;
+    text-decoration: none;
   }
 }
