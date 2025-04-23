@@ -30,6 +30,18 @@ ul[role="list"] {
   margin: 0;
 }
 
+/* Fjern spin buttons i Chrome, Safari, Edge */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Fjern spin buttons i Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 p,
 figure,
 blockquote,
