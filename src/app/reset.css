@@ -30,6 +30,10 @@ ul[role="list"] {
   margin: 0;
 }
 
+li {
+  list-style: none;
+}
+
 /* Fjern spin buttons i Chrome, Safari, Edge */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {

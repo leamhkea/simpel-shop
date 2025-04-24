@@ -1,10 +1,10 @@
 import SizeDropdown from "./SizeDropdown";
-const Description = () => {
+const Description = ({ title }) => {
   return (
     <article className="flex flex-col gap-10 w-100">
       <div>
         <div className="flex items-baseline gap-1.5">
-          <h2>name</h2>
+          <h2>{title}</h2>
           <p>brand</p>
         </div>
         <h3>price</h3>
