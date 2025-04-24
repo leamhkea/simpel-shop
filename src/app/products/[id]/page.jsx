@@ -8,7 +8,7 @@ export default async function SingleView({ params }) {
 
   return (
     <section>
-      <SingleCard {...productData.product} product={productData.product} />
+      <SingleCard product={productData} />
     </section>
   );
 }
