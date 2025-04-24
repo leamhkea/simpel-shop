@@ -3,7 +3,7 @@ import ItemSizeDropdown from "./ItemSizeDropdown";
 
 const ItemCard = () => {
   return (
-    <div className="flex flex-wrap gap-4 my-20">
+    <div className="flex flex-wrap gap-4">
       <img src="placeholder.png" alt="placeholder" />
 
       {/* Top section */}

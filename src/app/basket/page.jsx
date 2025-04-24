@@ -1,11 +1,10 @@
 import ItemCard from "@/components/(basketsite)/(items)/ItemCard";
+import BasketCard from "@/components/(basketsite)/BasketCard";
 
 const Basket = () => {
   return (
     <section>
-      <ItemCard />
-      <ItemCard />
-      <ItemCard />
+      <BasketCard />
     </section>
   );
 };
