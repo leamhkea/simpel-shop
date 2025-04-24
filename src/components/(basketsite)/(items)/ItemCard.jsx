@@ -1,25 +1,31 @@
 import ItemQuantity from "./ItemQuantity";
-import ItemSizeDropdown from "./ItemSizeDropdown";
+import Image from "next/image";
 
 const ItemCard = ({ data }) => {
   return (
     <div className="flex flex-wrap gap-4">
-      <img src="placeholder.png" alt="placeholder" />
+      <Image
+        src={data.images[0]}
+        width={100}
+        height={100}
+        alt="display photo"
+        className="object-contain max-w-full max-h-[400px]"
+      />
 
       {/* Top section */}
       <div className="flex flex-col justify-between w-100">
         <div>
           <div className="flex justify-between flex-wrap mb-2">
             <h2>{data.title}</h2>
-            <h3 className="font-bold">DDK 159</h3>
+            <h3 className="font-bold">{data.title} $</h3>
           </div>
-          <h3>Brand</h3>
+          <h3>{data.brand}</h3>
         </div>
 
         {/* Bottom section */}
         <div className="flex justify-between flex-wrap">
           <ItemQuantity id={data.id} qty={data.qty} />
-          <ItemSizeDropdown />
+          <p>Remove</p>
         </div>
       </div>
     </div>
