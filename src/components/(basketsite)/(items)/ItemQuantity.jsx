@@ -3,8 +3,13 @@ import { useState } from "react";
 import { BsPlusLg } from "react-icons/bs";
 import { HiMinus } from "react-icons/hi2";
 
-const ItemQuantity = () => {
-  const [count, setCount] = useState(1);
+const ItemQuantity = ({ id, qty }) => {
+  const [count, setCount] = useState(qty);
+
+  function updateCount() {
+    setCount(count + 1);
+    // updateProduct(id, count);
+  }
 
   return (
     <div>
@@ -18,7 +23,7 @@ const ItemQuantity = () => {
           onChange={(e) => setCount(Math.max(1, +e.target.value))}
           className="text-center w-12"
         />
-        <button onClick={() => setCount(count + 1)}>
+        <button onClick={() => updateCount()}>
           <BsPlusLg />
         </button>
       </div>

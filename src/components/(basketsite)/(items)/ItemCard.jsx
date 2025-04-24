@@ -1,7 +1,7 @@
 import ItemQuantity from "./ItemQuantity";
 import ItemSizeDropdown from "./ItemSizeDropdown";
 
-const ItemCard = () => {
+const ItemCard = ({ data }) => {
   return (
     <div className="flex flex-wrap gap-4">
       <img src="placeholder.png" alt="placeholder" />
@@ -10,7 +10,7 @@ const ItemCard = () => {
       <div className="flex flex-col justify-between w-100">
         <div>
           <div className="flex justify-between flex-wrap mb-2">
-            <h2>Name on the product</h2>
+            <h2>{data.title}</h2>
             <h3 className="font-bold">DDK 159</h3>
           </div>
           <h3>Brand</h3>
@@ -18,7 +18,7 @@ const ItemCard = () => {
 
         {/* Bottom section */}
         <div className="flex justify-between flex-wrap">
-          <ItemQuantity />
+          <ItemQuantity id={data.id} qty={data.qty} />
           <ItemSizeDropdown />
         </div>
       </div>
