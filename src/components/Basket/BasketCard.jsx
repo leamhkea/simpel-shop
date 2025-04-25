@@ -11,9 +11,17 @@ const BasketCard = () => {
       <div className="bg-(--white) px-10 py-10">
         <h2 className="font-bold pb-20">Basket (quantity)</h2>
         <div className="mb-8">
-          {items.map((item) => (
-            <ItemCard key={item.id} data={item} className="mb-8" />
-          ))}
+          {/* {items.length > 0 ?
+            (items.map((item) => (
+              <ItemCard key={item.id} data={item} className="mb-8" />
+            ))) : (
+
+            )} */}
+          {items && items.length > 0 ? (
+            items.map((item) => <ItemCard key={item.id} data={item} />)
+          ) : (
+            <p>Ingen produkter</p>
+          )}
         </div>
       </div>
       <div className="bg-(--white) px-10 py-10 sticky top-10 self-start">
