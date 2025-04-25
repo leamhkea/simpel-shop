@@ -7,7 +7,7 @@ const Navigation = () => {
   const pathname = usePathname();
 
   return (
-    <section className="fixed top-0 w-full bg-white z-50 shadow-md">
+    <section className="fixed top-0 w-full bg-white z-1 shadow-md">
       <nav>
         <ul className="flex items-center justify-between py-4 px-8">
           {/* Venstre side */}

@@ -24,6 +24,10 @@ body {
 
 section {
   padding-inline: var(--content-width);
+
+  > :not(nav) {
+    margin-top: 2rem;
+  }
 }
 
 .no-padding {
@@ -48,9 +52,5 @@ option {
 }
 
 a {
-  font-style: italic;
   text-decoration: none;
-  &:hover {
-    text-decoration: underline;
-  }
 }
