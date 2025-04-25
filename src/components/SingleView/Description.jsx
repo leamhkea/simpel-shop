@@ -19,7 +19,7 @@ const Description = ({
   const [isOpenReturnAndShipment, setIsOpenReturnAndShipment] = useState(false);
 
   return (
-    <article className="flex flex-col gap-10 w-100">
+    <article className="flex flex-col gap-10 w-100 ml-2">
       <div>
         <div className="flex items-baseline gap-1.5">
           <h2>{title}</h2>
