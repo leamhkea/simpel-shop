@@ -1,5 +1,6 @@
 import ProductQuantity from "./ProductQuantity";
 import Image from "next/image";
+import productDeleteFromBasket from "@/store/itemStore";
 
 const ItemCard = ({ data }) => {
   return (
@@ -24,9 +25,14 @@ const ItemCard = ({ data }) => {
 
         {/* Bottom section */}
         <div className="flex justify-between flex-wrap">
-          <ProductQuantity id={data.id} qty={data.qty} />
+          <ProductQuantity id={data.id} qty={data.quantity} />
           <div>
-            <button className="hover:text-red-600">Remove</button>
+            <button
+              onClick={() => productDeleteFromBasket(data.id)}
+              className="hover:text-red-600"
+            >
+              Remove
+            </button>
             <hr />
           </div>
         </div>
