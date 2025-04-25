@@ -37,21 +37,19 @@ const useItemStore = create(
             }),
           ],
         })),
+      removeItem: (itemID) =>
+        set((state) => ({
+          items: state.items.filter((item) => item.id !== itemID),
+        })),
     }),
     { name: "storage" }
   )
 );
-const productDeleteFromBasket = (deleteItem) => {
-  const newItem = items.filter((item) => item !== deleteItem);
-  addItem(newItem);
+// const productDeleteFromBasket = (deleteItem) => {
+//   const newItem = items.filter((item) => item !== deleteItem);
+//   addItem(newItem);
 
-  productDeleteFromBasket;
-};
+//   productDeleteFromBasket;
+// };
 
 export default useItemStore;
-
-// use client
-// { items } = useItemStore
-
-// (state.items.find((el) => el.id === item.id).quantity = 2)
-// [...state.items, { ...item, quantity: 1 }]

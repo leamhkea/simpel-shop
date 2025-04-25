@@ -1,8 +1,10 @@
 import ProductQuantity from "./ProductQuantity";
 import Image from "next/image";
-import productDeleteFromBasket from "@/store/itemStore";
+import useItemStore from "@/store/itemStore";
 
 const ItemCard = ({ data }) => {
+  const removeItem = useItemStore((state) => state.removeItem);
+
   return (
     <div className="flex flex-col sm:flex-row gap-4 mb-20 p-10 shadow-md">
       <Image
@@ -28,7 +30,7 @@ const ItemCard = ({ data }) => {
           <ProductQuantity id={data.id} qty={data.quantity} />
           <div>
             <button
-              onClick={() => productDeleteFromBasket(data.id)}
+              onClick={() => removeItem(data.id)}
               className="hover:text-red-600"
             >
               Remove
