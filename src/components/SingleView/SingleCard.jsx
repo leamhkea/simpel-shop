@@ -1,6 +1,7 @@
 import ImageDisplay from "./ImageDisplay";
 import Description from "./Description";
 import SingleButton from "./SingleButton";
+import { BsBasket2 } from "react-icons/bs";
 
 const SingleCard = ({ product }) => {
   return (
@@ -9,7 +10,9 @@ const SingleCard = ({ product }) => {
       <div className="flex flex-col justify-between">
         <Description {...product} />
         <div className="flex justify-between flex-wrap">
-          <SingleButton item={product} />
+          <SingleButton item={product}>
+            Add to basket <BsBasket2 size={20} />
+          </SingleButton>
         </div>
       </div>
     </div>
