@@ -4,7 +4,7 @@ import SingleButton from "./SingleButton";
 
 const SingleCard = ({ product }) => {
   return (
-    <div className="flex flex-wrap gap-5 bg-(--white) px-10 py-10 min-h-150">
+    <div className="flex flex-wrap gap-5 bg-(--white) px-10 py-10 min-h-150 justify-between">
       <ImageDisplay images={product.images} />
       <div className="flex flex-col justify-between">
         <Description {...product} />
