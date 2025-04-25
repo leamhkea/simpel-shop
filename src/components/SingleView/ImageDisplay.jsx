@@ -14,7 +14,7 @@ const ImageDisplay = ({ images }) => {
           onClick={() => setImageClicked(`${images[0]}`)}
           src={images[0]}
         />
-        <Image
+        {/* <Image
           className="w-1/4 h-1/4 cursor-pointer"
           width={200}
           height={200}
@@ -29,7 +29,7 @@ const ImageDisplay = ({ images }) => {
           alt="miniature photo 3"
           onClick={() => setImageClicked(`${images[2]}`)}
           src={images[2]}
-        />
+        /> */}
       </div>
       <Image
         src={chosenImage}

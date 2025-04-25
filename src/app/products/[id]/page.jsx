@@ -1,4 +1,4 @@
-import SingleCard from "@/components/(singleview)/SingleCard";
+import SingleCard from "@/components/SingleView/SingleCard";
 
 export default async function SingleView({ params }) {
   const { id } = await params;

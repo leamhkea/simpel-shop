@@ -1,8 +1,7 @@
 "use client";
 
-import ItemCard from "./(items)/ItemCard";
-import CheckoutCard from "./(checkout)/CheckoutCard";
-
+import ItemCard from "./ItemCard";
+import CheckoutCard from "./CheckoutCard";
 import useItemStore from "@/store/itemStore";
 
 const BasketCard = () => {

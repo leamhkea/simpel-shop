@@ -3,7 +3,7 @@ import { BsBasket2 } from "react-icons/bs";
 import useItemStore from "@/store/itemStore";
 
 const SingleButton = ({ item }) => {
-  const addItem = useItemStore((state) => state.addItem);
+  const { addItem } = useItemStore((state) => state);
   return (
     <button
       onClick={() => addItem(item)}

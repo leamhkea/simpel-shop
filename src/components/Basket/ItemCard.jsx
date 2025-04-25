@@ -5,7 +5,7 @@ const ItemCard = ({ data }) => {
   return (
     <div className="flex flex-wrap gap-4">
       <Image
-        src={data.images[0]}
+        src={data.thumbnail}
         width={100}
         height={100}
         alt="display photo"

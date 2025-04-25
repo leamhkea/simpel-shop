@@ -1,6 +1,6 @@
-import ImageDisplay from "./(singleimg)/ImageDisplay";
-import Description from "./(details)/Description";
-import SingleButton from "./(details)/SingleButton";
+import ImageDisplay from "./ImageDisplay";
+import Description from "./Description";
+import SingleButton from "./SingleButton";
 
 const SingleCard = ({ product }) => {
   return (
@@ -9,7 +9,7 @@ const SingleCard = ({ product }) => {
       <div className="flex flex-col justify-between">
         <Description {...product} />
         <div className="flex justify-between flex-wrap">
-          <SingleButton />
+          <SingleButton item={product} />
         </div>
       </div>
     </div>

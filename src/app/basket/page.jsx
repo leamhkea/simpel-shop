@@ -1,5 +1,4 @@
-import ItemCard from "@/components/(basketsite)/(items)/ItemCard";
-import BasketCard from "@/components/(basketsite)/BasketCard";
+import BasketCard from "@/components/Basket/BasketCard";
 
 const Basket = () => {
   return (
