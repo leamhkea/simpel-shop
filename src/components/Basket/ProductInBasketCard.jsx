@@ -1,31 +1,34 @@
-import ItemQuantity from "./ItemQuantity";
+import ProductQuantity from "./ProductQuantity";
 import Image from "next/image";
 
 const ItemCard = ({ data }) => {
   return (
-    <div className="flex flex-wrap gap-4">
+    <div className="flex flex-col sm:flex-row gap-4 mb-20 p-10 shadow-md">
       <Image
         src={data.thumbnail}
         width={100}
         height={100}
         alt="display photo"
-        className="object-contain max-w-full max-h-[400px]"
+        className="max-w-full object-contain"
       />
 
       {/* Top section */}
-      <div className="flex flex-col justify-between w-100">
+      <div className="flex flex-col justify-between flex-1 gap-10">
         <div>
           <div className="flex justify-between flex-wrap mb-2">
             <h2>{data.title}</h2>
-            <h3 className="font-bold">{data.title} $</h3>
+            <h3 className="font-bold">{data.price} $</h3>
           </div>
           <h3>{data.brand}</h3>
         </div>
 
         {/* Bottom section */}
         <div className="flex justify-between flex-wrap">
-          <ItemQuantity id={data.id} qty={data.qty} />
-          <p>Remove</p>
+          <ProductQuantity id={data.id} qty={data.qty} />
+          <div>
+            <button className="hover:text-red-600">Remove</button>
+            <hr />
+          </div>
         </div>
       </div>
     </div>
