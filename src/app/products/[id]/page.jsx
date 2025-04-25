@@ -7,7 +7,7 @@ export default async function SingleView({ params }) {
   const productData = await data.json();
 
   return (
-    <section>
+    <section className="mt-20">
       <SingleCard product={productData} />
     </section>
   );

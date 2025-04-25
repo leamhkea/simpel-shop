@@ -22,7 +22,7 @@ const Description = ({
     <article className="flex flex-col gap-10 w-100 ml-2">
       <div>
         <div className="flex items-baseline gap-1.5">
-          <h2>{title}</h2>
+          <h2 className="font-bold">{title}</h2>
           <p>{brand}</p>
         </div>
         <div className="flex items-baseline gap-3">
