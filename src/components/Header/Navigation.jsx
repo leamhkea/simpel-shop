@@ -7,22 +7,20 @@ const Navigation = () => {
   const pathname = usePathname();
 
   return (
-    <section className="fixed top-0 w-full bg-white z-1 shadow-md">
+    <header className="fixed top-0 px-(--content-width) w-full bg-white z-1 shadow-md">
       <nav>
         <ul className="flex items-center justify-between py-4 px-8">
           {/* Venstre side */}
           <div className="flex gap-8">
             <Link href="/">
-              <li
-                className={pathname === "/" ? "text-[#F2968F]" : "text-black"}
-              >
+              <li className={pathname === "/" ? "underline" : "text-black"}>
                 Home
               </li>
             </Link>
             <Link href="/products">
               <li
                 className={
-                  pathname === "/products" ? "text-[#F2968F]" : "text-black"
+                  pathname === "/products" ? "underline" : "text-black"
                 }
               >
                 Products
@@ -33,16 +31,12 @@ const Navigation = () => {
           {/* Højre side: kurv */}
           <Link href="/basket">
             <li>
-              <BasketIcon
-                className={
-                  pathname === "/basket" ? "text-[#F2968F]" : "text-black"
-                }
-              />
+              <BasketIcon />
             </li>
           </Link>
         </ul>
       </nav>
-    </section>
+    </header>
   );
 };
 

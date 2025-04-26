@@ -4,7 +4,7 @@ import Link from "next/link";
 const ListCard = ({ product }) => {
   return (
     <Link href={`/products/${product.id}`}>
-      <li className="bg-(--white) mb-4 min-h-100 px-2 shadow-md hover:scale-105 transition-all duration-300">
+      <li className="bg-(--white) mb-4 px-2 shadow-md hover:scale-105 transition-all duration-300 md:min-h-100">
         <Image
           alt={`Billede af ${product.title}`}
           width={1000}

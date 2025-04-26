@@ -8,7 +8,7 @@ const BasketCard = () => {
   const { items } = useItemStore((state) => state);
 
   return (
-    <section className="flex flex-col lg:flex-row gap-6 py-10 px-4">
+    <div className="flex flex-col lg:flex-row gap-6 py-10 px-4">
       {/* Basket-indholdet */}
       <div className="flex-1 bg-white px-6 py-10 shadow-md">
         <h2 className="font-bold pb-10">Basket ({items.length})</h2>
@@ -29,7 +29,7 @@ const BasketCard = () => {
         <h2 className="font-bold pb-10">Order summary</h2>
         <CheckoutCard items={items} />
       </div>
-    </section>
+    </div>
   );
 };
 

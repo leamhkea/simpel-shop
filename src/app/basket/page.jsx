@@ -2,7 +2,7 @@ import BasketCard from "@/components/Basket/BasketCard";
 
 const Basket = () => {
   return (
-    <section>
+    <section className="px-(--content-width)">
       <BasketCard />
     </section>
   );

@@ -5,7 +5,7 @@
   --paragraph-size: 1em;
   --h2-size: 24px;
   --h3-size: 18px;
-  --display-font: 48px;
+  --display-font: 128px;
 
   /*colors*/
   --black: #212121;
@@ -22,20 +22,9 @@ body {
   background-color: var(--grey);
 }
 
-section {
-  padding-inline: var(--content-width);
-
-  > :not(nav) {
-    margin-top: 2rem;
-  }
-}
-
-.no-padding {
-  padding-inline: 0;
-}
-
 h1 {
   font-size: var(--display-font);
+  line-height: 0.9;
 }
 
 h2 {

@@ -54,7 +54,6 @@ dd {
   margin: 0;
 }
 
-h1,
 h2,
 button,
 input,
@@ -82,7 +81,6 @@ p {
 }
 
 a[class]:any-link {
-  color: currentColor;
   text-decoration: none;
 }
 
