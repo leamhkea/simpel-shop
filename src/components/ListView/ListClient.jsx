@@ -1,26 +1,36 @@
 "use client";
 import { useState } from "react";
 import ListCard from "./ListCard";
+import SearchBar from "../Header/SearchBar";
 
 const ListClient = ({ data }) => {
   const [selectedCategory, setSelectedCategory] = useState("all");
+  const [searchResults, setSearchResults] = useState(null);
 
-  const categories = [];
-  data.products.forEach((product) => {
-    if (!categories.includes(product.category)) {
-      categories.push(product.category);
-    }
-  });
+  const categories = data.products
+    .map((p) => p.category)
+    .filter((category, index, self) => self.indexOf(category) === index);
+
+  const handleSearchResults = (results) => {
+    setSearchResults(results);
+    setSelectedCategory("all");
+  };
+
+  const productsToDisplay = searchResults || data.products;
 
   const filteredProducts =
     selectedCategory === "all"
-      ? data.products
-      : data.products.filter(
+      ? productsToDisplay
+      : productsToDisplay.filter(
           (product) => product.category === selectedCategory
         );
 
   return (
     <div className="grid gap-4">
+      <div className="flex flex-end mb-5 justify-end">
+        <SearchBar onSearchResults={handleSearchResults} />
+      </div>
+
       <h2 className="font-bold">Categories</h2>
       <div className="flex gap-4 overflow-x-auto pb-4">
         <button
