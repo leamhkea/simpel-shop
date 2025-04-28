@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import BasketIcon from "./BasketIcon";
+import SearchBar from "./SearchBar";
 
 const Navigation = () => {
   const pathname = usePathname();
