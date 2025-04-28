@@ -1,4 +1,4 @@
-import SingleButton from "../SingleView/SingleButton";
+import SingleButton from "../SingleView/ButtonAddToBasket";
 
 const CheckoutCard = () => {
   return (
@@ -14,7 +14,7 @@ const CheckoutCard = () => {
         </div>
         <hr />
       </div>
-      <button className="py-5 flex gap-2 bg-(--black) text-(--white) text-center rounded-4xl w-full items-center justify-center">
+      <button className="py-5 flex gap-2 bg-(--black) text-(--white) text-center rounded-4xl w-full items-center justify-center mt-5 hover:scale-105 transition-all duration-300">
         Checkout
       </button>
     </div>

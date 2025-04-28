@@ -1,6 +1,6 @@
 import ImageDisplay from "./ImageDisplay";
 import Description from "./Description";
-import SingleButton from "./SingleButton";
+import SingleButton from "./ButtonAddToBasket";
 import { BsBasket2 } from "react-icons/bs";
 
 const SingleCard = ({ product }) => {

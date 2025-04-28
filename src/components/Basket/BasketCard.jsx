@@ -3,12 +3,13 @@
 import ProductInBasketCard from "./ProductInBasketCard";
 import CheckoutCard from "./CheckoutCard";
 import useItemStore from "@/store/itemStore";
+import ButtonEmptyBasket from "./ButtonEmptyBasket";
 
 const BasketCard = () => {
   const { items } = useItemStore((state) => state);
 
   return (
-    <div className="flex flex-col lg:flex-row gap-6 py-10 px-4">
+    <div className="flex flex-col lg:flex-row m-20 gap-6 py-10 px-4">
       {/* Basket-indholdet */}
       <div className="flex-1 bg-white px-6 py-10 shadow-md">
         <h2 className="font-bold pb-10">Basket ({items.length})</h2>
@@ -21,6 +22,7 @@ const BasketCard = () => {
             <p>No products have been added to the basket</p>
           )}
         </div>
+        <ButtonEmptyBasket>Empty Basket</ButtonEmptyBasket>
       </div>
 
       {/* Order summary --> bliver sticky kun på større skærme */}
