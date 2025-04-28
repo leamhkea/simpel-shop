@@ -1,6 +1,10 @@
-import SingleButton from "../SingleView/ButtonAddToBasket";
+"use client";
+
+import useItemStore from "@/store/itemStore";
 
 const CheckoutCard = () => {
+  const { totalPrice } = useItemStore((state) => state);
+
   return (
     <div className="flex flex-col justify-between h-100">
       <div>
@@ -10,7 +14,7 @@ const CheckoutCard = () => {
         </div>
         <div className="flex justify-between flex-wrap mb-2">
           <h3>Total</h3>
-          <h3 className="font-bold">318 $</h3>
+          <h3 className="font-bold">{totalPrice()} $</h3>
         </div>
         <hr />
       </div>
