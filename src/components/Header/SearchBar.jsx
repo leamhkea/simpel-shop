@@ -6,7 +6,7 @@ const SearchBar = ({ onSearchResults }) => {
 
   const handleSearch = async () => {
     const response = await fetch(
-      `https://dummyjson.com/products/search?q=${query}`
+      `https://dummyjson.com/products/search?q=${query}` //limit på 1000 syntax??? er searchbar brugervenlig?
     );
     const data = await response.json();
     onSearchResults(data.products);
