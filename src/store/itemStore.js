@@ -37,19 +37,18 @@ const useItemStore = create(
             }),
           ],
         })),
+
+      // Denne funktion fjerner et produkt på Remove i basket, så det fjernes fra arrayet
       removeItem: (itemID) =>
         set((state) => ({
           items: state.items.filter((item) => item.id !== itemID),
         })),
+
+      // Denne funktion tømmer hele basket med alle produkter i arrayet
+      clearItems: () => set({ items: [] }),
     }),
     { name: "storage" }
   )
 );
-// const productDeleteFromBasket = (deleteItem) => {
-//   const newItem = items.filter((item) => item !== deleteItem);
-//   addItem(newItem);
-
-//   productDeleteFromBasket;
-// };
 
 export default useItemStore;
