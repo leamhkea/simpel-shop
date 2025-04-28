@@ -6,13 +6,14 @@ import useItemStore from "@/store/itemStore";
 import ButtonEmptyBasket from "./ButtonEmptyBasket";
 
 const BasketCard = () => {
-  const { items, itemSum } = useItemStore((state) => state);
+  const { items } = useItemStore((state) => state);
+  const itemSum = useItemStore((state) => state.itemSum());
 
   return (
     <div className="flex flex-col lg:flex-row m-20 gap-6 py-10 px-4">
       {/* Basket-indholdet */}
       <div className="flex-1 bg-white px-6 py-10 shadow-md flex flex-col">
-        <h2 className="font-bold pb-10">Basket ({itemSum()})</h2>
+        <h2 className="font-bold pb-10">Basket ({itemSum})</h2>
         <div className="flex-1">
           {items && items.length > 0 ? (
             items.map((item) => (
