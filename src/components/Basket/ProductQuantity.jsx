@@ -1,6 +1,5 @@
 "use client";
 import useItemStore from "@/store/itemStore";
-import { useState } from "react";
 import { BsPlusLg } from "react-icons/bs";
 import { HiMinus } from "react-icons/hi2";
 
