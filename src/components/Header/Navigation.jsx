@@ -2,9 +2,11 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import BasketIcon from "./BasketIcon";
+import DropDownBasket from "./DropDownBasket";
+import React, { useState, useRef } from "react";
 
 const Navigation = () => {
-  const { items } = useItemStore((state) => state);
+  // const { items } = useItemStore((state) => state);
   const pathname = usePathname();
   const [isHovering, setIsHovering] = useState(false); // State til at håndtere hover-tilstand
   const timeoutRef = useRef(null); // Reference til timeout for at kontrollere forsinkelsen af hover
