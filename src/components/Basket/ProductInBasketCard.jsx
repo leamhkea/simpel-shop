@@ -8,7 +8,7 @@ const ItemCard = ({ data }) => {
   return (
     <div className="flex flex-col sm:flex-row gap-4 mb-20 p-10 shadow-md">
       <Image
-        src={data.thumbnail}
+        src={data.thumbnail || "/placeholder.png"} // Hvis thumbnail er tom, brug placeholder.png
         width={100}
         height={100}
         alt="display photo"

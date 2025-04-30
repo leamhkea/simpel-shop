@@ -3,8 +3,8 @@
 import dynamic from "next/dynamic";
 
 const BasketCard = dynamic(() => import("@/components/Basket/BasketCard"), {
-  loading: () => <p>Loading cart...</p>,
-  ssr: false,
+  loading: () => <p>Loading cart...</p>, // Loading-indikator
+  ssr: false, // Slår server-side rendering fra for denne komponent
 });
 
 const Basket = () => {
