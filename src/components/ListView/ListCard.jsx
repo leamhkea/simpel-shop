@@ -1,17 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
-import SingleButton from "../SingleView/ButtonAddToBasket";
-import { BsBasket2 } from "react-icons/bs";
 
 const ListCard = ({ product }) => {
   return (
-    <li className="bg-(--white) mb-4 pb-4 px-2 shadow-md hover:scale-105 transition-all duration-300 md:min-h-100">
-      <Link href={`/products/${product.id}`}>
+    <Link href={`/products/${product.id}`}>
+      <li className="bg-(--white) mb-4 px-2 shadow-md hover:scale-105 transition-all duration-300 md:min-h-100">
         <Image
           alt={`Billede af ${product.title}`}
           width={1000}
           height={1000}
           src={product.thumbnail}
+          className=""
         />
         <div className="px-2 py-2 flex justify-between items-top">
           <div>
@@ -20,12 +19,8 @@ const ListCard = ({ product }) => {
           </div>
           <h3>{product.price}$</h3>
         </div>
-      </Link>
-      <SingleButton>
-        Add to basket
-        <BsBasket2 size={20} />
-      </SingleButton>
-    </li>
+      </li>
+    </Link>
   );
 };
 
