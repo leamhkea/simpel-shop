@@ -8,7 +8,7 @@ export default function Home() {
         width={1000}
         height={1000}
         alt="image of woman wearing beige clothes"
-        src="/hero.webp"
+        src="./hero.webp"
       />
       <div className="absolute top-100 left-10">
         <h1 className="uppercase font-extrabold">simpel shop</h1>
